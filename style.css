@@ -6,28 +6,36 @@
 
 html, body {
   background: linear-gradient(to right, orange, #ff6bab);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .calculator {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 500px;
+  width: 350px;
+  background-color: rgba(39, 38, 38, 0.514);
 
 }
 
 .display {
-  grid-column: 1 / -1;
+  height: 100px;
   margin: 3px;
   padding: 15px;
   background-color: rgba(0, 0, 0, .3);
   border: 2px solid black;
   border-radius: 10px;
   display: flex;
-  
   align-items: flex-end; 
   justify-content: space-around;
   flex-direction: column; 
@@ -50,15 +58,30 @@ html, body {
   margin: 0;
 }
 
-.calculator > button {
+button {
   font-size: 20px;
   border: 2px solid black;
   border-radius: 10px;
   margin: 3px;
   background-color: rgba(105, 105, 105, 0.5);
+  flex: 1;
 }
 
-.calculator > button:hover {
-  font-size: 24px;
+button:hover {
+
   background-color: rgba(105, 105, 105, 0.70);
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+ .flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+
+ }
