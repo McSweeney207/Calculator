@@ -60,8 +60,13 @@ function allClear() {
 
 //Calls the calculate function if the sum variable is not an empty string
 function chooseOperation() {
-  if (sum === '') return;
-  if (sum !== '') {
+  if (sum === '') {
+    return;
+  } else if (done === true){
+    two = one;
+    one = '';
+    updateDisplay(two + ' ' + sum, one)
+  } else {
   calculate();
   };
 };
